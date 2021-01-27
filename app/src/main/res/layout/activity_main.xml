@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/id_fondo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/tv_cabecera"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="MI TECLADO "
+        android:textSize="24sp"
+        app:layout_constraintHorizontal_bias="0.405"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_Do"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:onClick="funcion_do"
+        android:text="DO"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_Re"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Re"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_Re" />
+
+    <Button
+        android:id="@+id/btn_Si"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:onClick="funcion_si"
+        android:text="SI"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_La"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_La"
+        app:layout_constraintTop_toTopOf="@+id/btn_La" />
+
+    <Button
+        android:id="@+id/btn_La"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:onClick="funcion_la"
+        android:text="La"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_Sol"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Si"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_Sol"
+        app:layout_constraintTop_toTopOf="@+id/btn_Sol" />
+
+    <Button
+        android:id="@+id/btn_Re"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:onClick="funcion_re"
+        android:text="RE"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_Mi"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Mi"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_Do"
+        app:layout_constraintTop_toTopOf="@+id/btn_Mi" />
+
+    <Button
+        android:id="@+id/btn_Mi"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:onClick="funcion_mi"
+        android:text="MI"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_Fa"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Fa"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_Re"
+        app:layout_constraintTop_toTopOf="@+id/btn_Fa" />
+
+    <Button
+        android:id="@+id/btn_Sol"
+        android:layout_width="65dp"
+        android:layout_height="60dp"
+        android:onClick="funcion_sol"
+        android:text="Sol"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_Fa"
+        app:layout_constraintEnd_toStartOf="@+id/btn_La"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_Fa"
+        app:layout_constraintTop_toTopOf="@+id/btn_Fa" />
+
+    <Button
+        android:id="@+id/btn_Fa"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:onClick="funcion_fa"
+        android:text="FA"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Sol"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_Mi"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cabecera" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Velocidad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Fa" />
+
+    <Button
+        android:id="@+id/btn_suma"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="funcion_suma_vel"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_velocidad"
+        app:layout_constraintEnd_toStartOf="@+id/tv_velocidad"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_velocidad" />
+
+    <Button
+        android:id="@+id/btn_resta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="funcion_resta_vel"
+        android:text="-"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_velocidad"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/tv_velocidad"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="1"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_resta"
+        app:layout_constraintEnd_toStartOf="@+id/btn_resta"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_suma"
+        app:layout_constraintTop_toTopOf="@+id/btn_resta" />
+
+    <TextView
+        android:id="@+id/tv_titulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Titulo de cancion - Duracion "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_resta" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="funcion_cancion_1"
+        android:text="Cancion 1"
+        app:layout_constraintBottom_toBottomOf="@+id/button12"
+        app:layout_constraintEnd_toStartOf="@+id/button12"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button12" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="funcion_cancion_2"
+        android:text="Cancion 2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button11"
+        app:layout_constraintTop_toBottomOf="@+id/tv_titulo" />
+
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="funcion_detener"
+        android:text="Detener"
+        app:layout_constraintBottom_toBottomOf="@+id/button14"
+        app:layout_constraintEnd_toStartOf="@+id/button14"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button14" />
+
+    <Button
+        android:id="@+id/button14"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="funcion_play"
+        android:text="Play"
+        app:layout_constraintEnd_toStartOf="@+id/button15"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button13"
+        app:layout_constraintTop_toBottomOf="@+id/button12" />
+
+    <Button
+        android:id="@+id/button15"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="funcion_pausar"
+        android:text="Pausar"
+        app:layout_constraintBottom_toBottomOf="@+id/button14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button14"
+        app:layout_constraintTop_toTopOf="@+id/button14" />
+
+    <Button
+        android:id="@+id/button16"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="funcion_subir_volumen"
+        android:text="Subir Volumen"
+        app:layout_constraintBottom_toBottomOf="@+id/button17"
+        app:layout_constraintEnd_toStartOf="@+id/button17"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button17" />
+
+    <Button
+        android:id="@+id/button17"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="funcion_bajar_volumen"
+        android:text="Bajar Volumen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button16"
+        app:layout_constraintTop_toBottomOf="@+id/button14" />
+
+    <Button
+        android:id="@+id/button18"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="funcion_selecion_inicio"
+        android:text="Empezar en: "
+        app:layout_constraintBottom_toBottomOf="@+id/editTextNumber"
+        app:layout_constraintEnd_toStartOf="@+id/editTextNumber"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextNumber"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button18"
+        app:layout_constraintTop_toBottomOf="@+id/button17" />
+
+    <Button
+        android:id="@+id/button19"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="funcion_grabar_detener"
+        android:text="Grabar - detener"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+
+    <Button
+        android:id="@+id/button20"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="funcion_reproduccion_audio"
+        android:text="reproducir audio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button19" />
+
+    <Button
+        android:id="@+id/button21"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="funcion_reproduccion_melodia"
+        android:text="reproducir melodia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bnt_g_d_m" />
+
+    <Button
+        android:id="@+id/bnt_g_d_m"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="funcion_grabar_melodia"
+        android:text="grabar detener melodia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button20" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:onClick="funcion_cambio_color"
+        android:text="Cambio de color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button21"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
